@@ -1,0 +1,166 @@
+@font-face {
+    font-family: Ritafurey;
+    src: url(../fonts/Ritafurey-BoldItalic.otf);
+}
+
+@font-face {
+    font-family: Existence;
+    src: url(../fonts/Existence-StencilLight.otf);
+}
+
+@media (max-width: 500px) {
+    .vid {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 800px) and (min-width:500px) {
+    .col-3{
+        flex: 25%;
+        max-width: 33.3333%;
+    }
+
+    .col-4{
+        flex: 40%;
+        max-width: 50%;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .col-4{
+        flex: 23%;
+        max-width: 25%;
+    }
+
+    .col-3{
+        flex: 25%;
+        max-width: 33.3333%;
+    }
+
+    .big{
+        flex: 25%;
+        max-width: 50%;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body{
+    flex-direction: row;
+}
+
+.top {
+    background-image: url("../img/fondo.jpg");
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f0f0f0 ;
+    height: 50vh;
+    max-height: 500px;
+    font-family: Ritafurey;
+}
+
+.main {
+    background-color: rgb(255, 255, 255);
+    flex-grow: 1;
+}
+
+.footer{
+    background-color: gray;
+    margin-top: auto;
+}
+
+.section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.top-container{
+    background-color: rgba(233, 233, 233, 0.4);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+svg{
+    height: 50px;
+    width: 50px;
+    stroke: #ffffff;
+    fill: #ffffff;
+    padding-right: 4px;
+}
+
+svg:hover{
+    stroke: #030303;
+    fill: #000000;
+    transition: linear 1s;
+}
+
+.title{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    margin: 10pt 5pt 10pt;
+    font-size: 1.4rem;
+    font-family: Existence;
+}
+
+.imgrow{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.vid{
+    padding: 0 4px;
+}
+
+.vid video, .vid img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 2.5px;
+}
+
+.album-bar{
+    display: flex;
+    overflow: auto;
+    flex-wrap: nowrap;
+}
+
+.album{
+    min-width: 100px;
+    min-height: 100px;
+    position: relative;
+    padding: 4px;
+}
+
+.album img{
+    width: 100%;
+    height: auto;
+}
