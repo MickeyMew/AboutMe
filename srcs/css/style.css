@@ -57,7 +57,7 @@ body{
 }
 
 .top {
-    background-image: url("../img/fondo.jpg");
+    background-image: url("../img/ma1.jpg");
     background-position: 50% 60%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -67,14 +67,22 @@ body{
     font-family: Ritafurey;
 }
 
+.main .container{
+    background-color: rgb(41, 41, 41);
+    padding: 0 10px;
+    padding-bottom: 20px;
+}
+
 .main {
-    background-color: rgb(255, 255, 255);
+    background-color: #646464;
     flex-grow: 1;
 }
 
 .footer{
+    background-image: url(../img/pattern1.jpg);
     background-color: gray;
     margin-top: auto;
+    height: 100px;
 }
 
 .section{
@@ -91,24 +99,30 @@ body{
 }
 
 .top-container{
-    background-color: rgba(233, 233, 233, 0.4);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(105, 162, 177);;
+    color: rgba(255, 255, 255,0.9);
+    font-size: 1.5em;
+    background-color: rgba(233, 233, 233, 0);
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
 .socials{
+    position: absolute;
+    align-self: flex-end;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    padding: 4px;
 }
 
 svg{
     height: 50px;
     width: 50px;
-    stroke: #ffffff;
-    fill: #ffffff;
-    padding-right: 4px;
+    stroke: rgba(255, 255, 255,0.9);;
+    fill: rgba(255, 255, 255,0.9);;
 }
 
 svg:hover{
@@ -122,12 +136,46 @@ svg:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 p{
-    margin: 10pt 5pt 10pt;
+    color: rgb(196, 238, 255);
+    padding: 10pt 5pt 10pt;
     font-size: 1.4rem;
     font-family: Existence;
+}
+
+h2{
+    padding: 12pt 5pt 0;
+    color: rgb(196, 238, 255);
+    font-size: 1.4rem;
+    font-family: Existence;
+}
+
+.link{
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: rgb(196, 255, 245);
+    transition: ease 1s;
+}
+
+.link:hover{
+    background-color: rgb(110, 161, 153);
+    transition: ease 1s;
+}
+
+.link p{
+    color: rgb(54, 70, 67);
+    font-weight: bold;
+}
+
+.link p:hover{
+    color: rgb(172, 255, 238);
+    font-weight: bold;
+    transition: ease 1s;
 }
 
 .imgrow{
@@ -148,6 +196,9 @@ p{
 }
 
 .album-bar{
+    border-radius: 2.5px;
+    background-color: #f0f0f0;
+    margin: 0 10px;
     display: flex;
     overflow: auto;
     flex-wrap: nowrap;
