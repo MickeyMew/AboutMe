@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome!</title>
+    <title>Hi there!</title>
     <link rel="stylesheet" href="srcs/css/style.css">
 </head>
 
@@ -79,7 +79,7 @@
                     CECyT #9 High School where I studied to be a programming technician.
                 </p>
                 <p>
-                    C/C++, PHP, Python(Pandas, Matplotlib, NumPy), JS(node, react, ES6), Java, SQL, Assembly language, VHDL.
+                    I have knowledge of C/C++, PHP, Python(Pandas, Matplotlib, NumPy), JS(node, react, ES6), Java, SQL, Assembly language, VHDL.
                 </p>
                 <p>
                     Debian is my favorite distribution.
@@ -144,42 +144,51 @@
                     Music is one of my passion, though I'm not very good at playing guitar
                     or piano I love music and I enjoy it every moment I can. Here are some of my favorite albums.
                 </p>
-                <div class="album-bar">
-                    <div class="album">
-                        <img src="srcs/img/albums/album.png" alt="Innerspeaker">
+                <div class="album-container">
+                    <div id="arrow-left">
+                        <p>&#8249;</p>
                     </div>
-                    <div class="album">
-                        <img src="srcs/img/albums/album1.jpg" alt="For your eyez only">
+                    <div class="album-bar" id="album-bar">
+                        <div class="album">
+                            <img src="srcs/img/albums/album.png" alt="Innerspeaker">
+                        </div>
+                        <div class="album">
+                            <img src="srcs/img/albums/album1.jpg" alt="For your eyez only">
+                        </div>
+                        <div class="album">
+                            <img src="srcs/img/albums/album2.jpg" alt="Good kid MAAD city">
+                        </div>
+                        <div class="album">
+                            <img src="srcs/img/albums/album3.png" alt="Kid A">
+                        </div>
+                        <div class="album">
+                            <img src="srcs/img/albums/album4.jpg" alt="Everything goes numb">
+                        </div>
+                        <div class="album">
+                            <img src="srcs/img/albums/album5.jpg" alt="The eraser">
+                        </div>
+                        <div class="album">
+                            <img src="srcs/img/albums/album6.jpg" alt="Roseland NYC live">
+                        </div>
+                        <div class="album">
+                            <img src="srcs/img/albums/album7.jpg" alt="Disintegration">
+                        </div>
+                        <div class="album">
+                            <img src="srcs/img/albums/album8.jpg" alt="Boys don't cry">
+                        </div>
+                        <div class="album">
+                            <img src="srcs/img/albums/album9.jpg" alt="Blood Sugar Sex Magik">
+                        </div>
+                        <div class="album">
+                            <img src="srcs/img/albums/album10.jpg" alt="Best of Depeche Mode">
+                        </div>
+                        <div class="album">
+                            <img src="srcs/img/albums/album11.jpg" alt="Cancion Animal">
+                        </div>
+                        
                     </div>
-                    <div class="album">
-                        <img src="srcs/img/albums/album2.jpg" alt="Good kid MAAD city">
-                    </div>
-                    <div class="album">
-                        <img src="srcs/img/albums/album3.png" alt="Kid A">
-                    </div>
-                    <div class="album">
-                        <img src="srcs/img/albums/album4.jpg" alt="Everything goes numb">
-                    </div>
-                    <div class="album">
-                        <img src="srcs/img/albums/album5.jpg" alt="The eraser">
-                    </div>
-                    <div class="album">
-                        <img src="srcs/img/albums/album6.jpg" alt="Roseland NYC live">
-                    </div>
-                    <div class="album">
-                        <img src="srcs/img/albums/album7.jpg" alt="Disintegration">
-                    </div>
-                    <div class="album">
-                        <img src="srcs/img/albums/album8.jpg" alt="Boys don't cry">
-                    </div>
-                    <div class="album">
-                        <img src="srcs/img/albums/album9.jpg" alt="Blood Sugar Sex Magik">
-                    </div>
-                    <div class="album">
-                        <img src="srcs/img/albums/album10.jpg" alt="Best of Depeche Mode">
-                    </div>
-                    <div class="album">
-                        <img src="srcs/img/albums/album11.jpg" alt="Cancion Animal">
+                    <div id="arrow-right">
+                        <p>&#8250;</p>
                     </div>
                 </div>
                 <h2>Cryptography Important Event</h2>
@@ -203,6 +212,32 @@
         <div class="footer">
         </div>
     </div>
+    <script>
+        let x = 0;
+        const delta = 50;
+        const albumWidth = 100;
+        const xMax = albumWidth * (document.getElementById("album-bar").childElementCount + 1);
+        scroll = opc => {
+            const bar = document.getElementById("album-bar");
+            const offset = bar.offsetWidth;
+            console.log(offset);
+            if( opc == "r" ){
+                x =  x + delta + offset > xMax ? xMax - offset : x + delta;
+            } else {
+                x = x - delta < 0 ? 0 : x - delta;
+            }
+            console.log(x);
+            bar.scroll({
+                top: 0,
+                left: x,
+                behavior: 'smooth'
+            });
+        }
+        const left_btn = document.getElementById("arrow-left");
+        const right_btn = document.getElementById("arrow-right");
+        left_btn.addEventListener("click",(e => scroll('l')));
+        right_btn.addEventListener("click",(e => scroll('r')));
+    </script>
 </body>
 
 </html>
